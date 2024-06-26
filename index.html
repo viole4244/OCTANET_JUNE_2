@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <button id="toggle-mode-btn">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="task-entry">
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <input type="text" id="category-input" placeholder="Category">
+            <input type="date" id="due-date-input">
+            <input type="text" id="due-time-input" placeholder="Set Time">
+            <select id="priority-input">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <div class="filter-options">
+            <input type="text" id="filter-category-input" placeholder="Filter by category">
+            <select id="filter-priority-input">
+                <option value="">All Priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="filter-tasks-btn">Filter Tasks</button>
+            <button id="clear-completed-btn">Clear Completed Tasks</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
